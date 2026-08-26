@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>br.cesul</groupId>
-  <artifactId>PlanejadorViagem</artifactId>
+  <artifactId>PainelViagem</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>PlanejadorViagem</name>
+  <name>PainelViagem</name>
   <url>http://maven.apache.org</url>
 
   <properties>
