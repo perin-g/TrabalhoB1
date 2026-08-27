@@ -1,5 +1,7 @@
 package br.cesul.trabalhoB1;
 
+import javafx.application.Application;
+
 /**
  * Hello world!
  *
