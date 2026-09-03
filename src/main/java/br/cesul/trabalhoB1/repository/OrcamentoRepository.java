@@ -3,11 +3,12 @@ package br.cesul.trabalhoB1.repository;
 import br.cesul.trabalhoB1.config.MongoConfig;
 import br.cesul.trabalhoB1.model.Despesa;
 import com.mongodb.client.MongoCollection;
+import com.mongodb.client.model.Filters;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import static com.mongodb.client.model.Sorts.descending;
 
-public class orcamentoRepository {
+public class OrcamentoRepository {
     private final MongoCollection<Despesa> col = MongoConfig.db.getCollection("painelviagem", Despesa.class);
 
 
@@ -17,9 +18,8 @@ public class orcamentoRepository {
     }
 
 
-
     public void excluir (Despesa d) {
-        col.deleteOne(org.bson.Document.parse("{_id: ObjectID('" + d.getId() + "')}"));
+            col.deleteOne(Filters.eq("_id",d.getId()));
     }
 
     public ObservableList<Despesa> findAll() {
